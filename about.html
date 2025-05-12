@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Aril Ardani</title>
+  <style>
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1d0633;
+      color: white;
+      background: linear-gradient(120deg, #1d0633, #360252);
+    }
+
+    /* Navigation styles from Uiverse.io by codebykay101 */
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem; /* Jarak antar link */
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: transparent;
+      backdrop-filter: blur(10px);
+    }
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+      position: relative;
+      padding: 5px 0;
+      transition: color 0.3s ease;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #00eaff;
+      bottom: 0;
+      left: 50%;
+      transition: all 0.3s ease;
+    }
+    nav a:hover::after {
+      width: 100%;
+      left: 0;
+    }
+    nav a:hover {
+      color: #00eaff;
+    }
+    .container {
+      padding-top: 80px;
+      margin-top: 80px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 10%;
+      min-height: 80vh;
+    }
+    section#about {
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .glass-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .about-img {
+      text-align: center;
+    }
+
+    .about-img img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #00ffff;
+      object-fit: cover;
+    }
+
+    .btn {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 10px 20px;
+      background: #00ffff;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: rgb(255, 255, 255);
+      color: #00ffff;
+    }
+
+    .about-text {
+      flex: 1;
+      line-height: 1.6;
+      max-width: 500px;
+    }
+
+    h2, h3 {
+      text-align: left;
+      width: 100%;
+      max-width: 1000px;
+      margin-bottom: 10px;
+      font-size: 2rem;
+      border-bottom: 4px solid #00ffff;
+      padding-bottom: 5px;
+    }
+
+    .skills {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .skills img {
+      width: 60px;
+      height: 60px;
+      transition: transform 0.3s ease;
+    }
+
+    .skills img:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .glass-box {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      h2, h3 {
+        text-align: center;
+      }
+    }
+    .skill-logo {
+      width: 60px;
+      height: 60px;
+      transition: filter 0.3s ease;
+    }
+    .skill-logo.python:hover {
+      filter: drop-shadow(0 0 2px #3776AB) drop-shadow(0 0 5px #3776AB);
+    }
+    .skill-logo.figma:hover {
+      filter: drop-shadow(0 0 2px #F24E1E) drop-shadow(0 0 5px #F24E1E);
+    }
+    .skill-logo.html:hover {
+      filter: drop-shadow(0 0 2px #E34F26) drop-shadow(0 0 5px #E34F26);
+    }
+    .skill-logo.css:hover {
+      filter: drop-shadow(0 0 2px #1572B6) drop-shadow(0 0 5px #1572B6);
+    }
+    .skill-logo.r:hover {
+      filter: drop-shadow(0 0 2px #276DC3) drop-shadow(0 0 5px #276DC3);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="burger-menu" id="burger-menu" tabindex="0" aria-label="Toggle navigation menu" role="button" aria-expanded="false" aria-controls="nav-links" style="display:none; cursor:pointer; flex-direction: column; gap: 5px;">
+      <span style="width: 25px; height: 3px; background-color: white; border-radius: 2px;"></span>
+      <span style="width: 25px; height: 3px; background-color: white; border-radius: 2px;"></span>
+      <span style="width: 25px; height: 3px; background-color: white; border-radius: 2px;"></span>
+    </div>
+    <div id="nav-links" style="display: flex; gap: 2rem;">
+      <a href="home.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="project.html">Project</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+  </nav>
+  
+  <script>
+    const burgerMenu = document.getElementById('burger-menu');
+    const navLinks = document.getElementById('nav-links');
+    burgerMenu.addEventListener('click', () => {
+      const expanded = burgerMenu.getAttribute('aria-expanded') === 'true' || false;
+      burgerMenu.setAttribute('aria-expanded', !expanded);
+      if (navLinks.style.display === 'flex') {
+        navLinks.style.display = 'none';
+      } else {
+        navLinks.style.display = 'flex';
+        navLinks.style.flexDirection = 'column';
+        navLinks.style.backgroundColor = 'rgba(29, 6, 51, 0.9)';
+        navLinks.style.position = 'absolute';
+        navLinks.style.top = '60px';
+        navLinks.style.right = '10px';
+        navLinks.style.padding = '10px';
+        navLinks.style.borderRadius = '8px';
+        navLinks.style.zIndex = '1000';
+      }
+    });
+  </script>
+  
+  <style>
+    @media (max-width: 768px) {
+      #nav-links {
+        display: none !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
+      }
+      #burger-menu {
+        display: flex !important;
+      }
+      nav {
+        position: relative;
+      }
+    }
+  </style>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="glass-box">
+      <div class="about-img">
+        <img src="img/aril.jpg" alt="Foto Aril">
+        <br>
+        <a href="#" class="btn">My Portofolio</a>
+      </div>
+      <div class="about-text">
+        <p>Hello, World! I am Aril, I am a Digital Business student of Makassar University. Nama lengkap saya M. Aril Ardani dengan NIM 240907500023. Saya berasal dari daerah Enrekang dan saat ini sedang menempuh studi di program studi Bisnis Digital.</p>
+        <p>Salah satu hobi yang paling saya sukai adalah bermain game, karena melalui hobi ini saya bisa bersantai sekaligus mengasah strategi dan kreativitas. Saya juga bermimpi untuk memiliki game buatan saya sendiri suatu hari nanti, yang bisa dinikmati banyak orang di seluruh dunia.</p>
+      </div>
+    </div>
+
+    <h3>Skill</h3>
+    <div class="skills">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python" title="Python" class="skill-logo python">
+      <img src="img/figma (1).png" alt="Figma" title="Figma" class="skill-logo figma">
+      <img src="img/html.png" alt="HTML" title="HTML" class="skill-logo html">
+      <img src="img/css-3.png" alt="CSS" title="CSS" class="skill-logo css">
+      <img src="img/r.png" alt="R" title="R" class="skill-logo r">
+    </div>
+  </section>
+
+</body>
+</html>

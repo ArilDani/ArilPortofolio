@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Aril Ardani</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1d0633;
+      color: white;
+    }
+
+    .contact-section {
+      max-width: 500px;
+      margin: 80px auto;
+      text-align: center;
+    }
+
+    .contact-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.05);
+      color: white;
+      font-size: 1rem;
+      resize: none;
+      box-shadow: inset 0 0 5px rgba(255,255,255,0.1);
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #00eaff;
+      border: none;
+      border-radius: 20px;
+      color: black;
+      font-weight: bold;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #00cce3;
+    }
+
+    .contact-form button i {
+      font-style: normal;
+    }
+
+  /* Navigation styles from Uiverse.io by codebykay101 */
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem; /* Jarak antar link */
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: transparent;
+      backdrop-filter: blur(10px);
+    }
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+      position: relative;
+      padding: 5px 0;
+      transition: color 0.3s ease;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #00eaff;
+      bottom: 0;
+      left: 50%;
+      transition: all 0.3s ease;
+    }
+    nav a:hover::after {
+      width: 100%;
+      left: 0;
+    }
+    nav a:hover {
+      color: #00eaff;
+    }
+
+</style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="burger-menu" id="burger-menu" tabindex="0" aria-label="Toggle navigation menu" role="button" aria-expanded="false" aria-controls="nav-links" style="display:none; cursor:pointer; flex-direction: column; gap: 5px;">
+      <span style="width: 25px; height: 3px; background-color: white; border-radius: 2px;"></span>
+      <span style="width: 25px; height: 3px; background-color: white; border-radius: 2px;"></span>
+      <span style="width: 25px; height: 3px; background-color: white; border-radius: 2px;"></span>
+    </div>
+    <div id="nav-links" style="display: flex; gap: 2rem;">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="project.html">Project</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </nav>
+  
+  <script>
+    const burgerMenu = document.getElementById('burger-menu');
+    const navLinks = document.getElementById('nav-links');
+    burgerMenu.addEventListener('click', () => {
+      const expanded = burgerMenu.getAttribute('aria-expanded') === 'true' || false;
+      burgerMenu.setAttribute('aria-expanded', !expanded);
+      if (navLinks.style.display === 'flex') {
+        navLinks.style.display = 'none';
+      } else {
+        navLinks.style.display = 'flex';
+        navLinks.style.flexDirection = 'column';
+        navLinks.style.backgroundColor = 'rgba(29, 6, 51, 0.9)';
+        navLinks.style.position = 'absolute';
+        navLinks.style.top = '60px';
+        navLinks.style.right = '10px';
+        navLinks.style.padding = '10px';
+        navLinks.style.borderRadius = '8px';
+        navLinks.style.zIndex = '1000';
+      }
+    });
+  </script>
+  
+  <style>
+    @media (max-width: 768px) {
+      #nav-links {
+        display: none !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
+      }
+      #burger-menu {
+        display: flex !important;
+      }
+      nav {
+        position: relative;
+      }
+    }
+  </style>
+
+  <!-- Contact Section -->
+  <div class="contact-section">
+    <h1>Contact us</h1>
+    <form class="contact-form" action="#" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" rows="6" placeholder="Write Message..." required></textarea>
+      <button type="submit">
+      <img src="img/send.png" alt="Send Icon" style="width: 20px; height: 20px;" />Send</button>
+    </form>
+   </body> 
+</html> 
+
